@@ -14,23 +14,12 @@
   box-sizing: border-box;
 }
 
-/* Fix white lines */
-html,
-body {
-  overflow-x: hidden;
-  overflow-y: auto;
-  width: 100%;
-  height: 100%;
-  background-color: var(--dark-primary);
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: "Poppins", sans-serif;
-  color: #fff;
 }
 
 /* Header */
@@ -45,8 +34,7 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  z-index: 10;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 1;
 }
 
 header .logo {
@@ -69,14 +57,14 @@ header ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease 0s;
 }
 
 header ul li a:hover {
   color: var(--primary);
+  transition: all 0.3s ease 0s;
 }
 
-/* Hero Section */
 /* Hero Section */
 section.hero-section {
   background-color: var(--dark-primary);
@@ -175,6 +163,7 @@ ul.social-icons {
   transition: all 0.3s ease 0s;
 }
 
+
 /* About Section */
 section.about-section {
   background-color: #22282f;
@@ -182,22 +171,21 @@ section.about-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 10%;
-  width: 100%;
-  overflow: hidden;
+  padding: 60px;
 }
 
 .about-img img {
   width: 250px;
   height: 250px;
+  padding: 2px;
   border-radius: 50%;
   border: 3px solid var(--primary);
-  box-shadow: 0 0 25px rgba(255, 85, 85, 0.3);
+  box-shadow: 3px 5px 30px #613026;
   object-fit: cover;
 }
 
 .about-content {
-  margin-left: 80px;
+  margin-left: 100px;
   max-width: 600px;
 }
 
@@ -212,13 +200,18 @@ section.about-section {
 .about-content p {
   color: #c4c4c4;
   font-size: 15px;
-  line-height: 1.6;
 }
 
 .about-content button {
   margin-top: 30px;
   font-size: 15px;
 }
+
+.about-content button > a {
+  text-decoration: none;
+  color: var(--dark-primary);
+}
+
 
 /* Skills Section */
 section.skills-section {
@@ -277,7 +270,8 @@ section.skills-section {
   color: #e0e0e0;
 }
 
-* Projects Section */
+
+/* Projects Section */
 section.projects-section {
   background-color: var(--dark-primary);
   color: #fff;
@@ -590,4 +584,3 @@ footer a {
     width: 100%;
   }
 }
-
