@@ -77,16 +77,13 @@ header ul li a:hover {
 }
 
 /* Hero Section */
+/* Hero Section */
 section.hero-section {
   background-color: var(--dark-primary);
   color: #fff;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 120px 10% 50px;
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
+  padding: 100px 120px 50px 200px;
 }
 
 .hero-section__title {
@@ -99,14 +96,11 @@ section.hero-section {
 
 .hero-section__desc {
   color: #c4c4c4;
-  max-width: 600px;
 }
 
 .hero-img img {
   margin-left: 30px;
   border-radius: 15px;
-  max-width: 100%;
-  height: auto;
 }
 
 .social-icons {
@@ -116,7 +110,6 @@ section.hero-section {
 ul.social-icons {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
 }
 
 .social-icons li {
@@ -124,26 +117,36 @@ ul.social-icons {
   border-radius: 50%;
   border: 1px solid var(--primary);
   padding: 8px 12px;
-  transition: all 0.3s ease;
 }
 
 .social-icons li:hover {
   background-color: var(--primary);
+  transition: all 0.3s ease 0s;
 }
 
 .social-icons li a {
   text-decoration: none;
   color: #fff;
   font-size: 18px;
+  transition: all 0.3s ease 0s;
+}
+
+.hero-buttons button {
+  margin-right: 10px;
+}
+
+.hero-buttons button > a {
+  text-decoration: none;
+  color: #fff;
 }
 
 /* Buttons */
 .btn {
   padding: 10px 20px;
-  border-radius: 4px;
+  border-radius: 2px;
   border: none;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease 0s;
 }
 
 .btn.btn-primary {
@@ -154,6 +157,7 @@ ul.social-icons {
 
 .btn.btn-primary:hover {
   background-color: var(--primary-hover);
+  transition: all 0.3s ease 0s;
 }
 
 .btn-dark-outlined {
@@ -165,8 +169,10 @@ ul.social-icons {
 }
 
 .btn-dark-outlined:hover {
+  cursor: pointer;
   background-color: var(--primary);
   color: #fff !important;
+  transition: all 0.3s ease 0s;
 }
 
 /* About Section */
@@ -584,3 +590,4 @@ footer a {
     width: 100%;
   }
 }
+
