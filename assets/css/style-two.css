@@ -5,6 +5,9 @@
   --primary: #ff5555;
   --primary-hover: #e43232;
   --dark-primary: #1b1f24;
+ 
+}
+
 }
 
 /* Reset */
@@ -226,7 +229,7 @@ section.skills-section {
 }
 
 .skills-section h2 span {
-  color: var(--primary);
+  color: #12bdff; /* soft blue accent instead of red */
 }
 
 .skills-container {
@@ -239,7 +242,7 @@ section.skills-section {
 .skill-card {
   background-color: var(--dark-primary);
   border: 1px solid transparent;
-  border-radius: 10px;
+  border-radius: 12px;
   width: 120px;
   height: 120px;
   padding: 20px;
@@ -248,25 +251,36 @@ section.skills-section {
   align-items: center;
   justify-content: center;
   transition: all 0.4s ease;
-  box-shadow: 0 0 10px rgba(255, 85, 85, 0.15);
+  box-shadow: 0 0 10px rgba(18, 189, 255, 0.1);
 }
 
 .skill-card:hover {
-  border: 1px solid var(--primary);
-  box-shadow: 0 0 20px var(--primary);
-  transform: translateY(-5px);
+  border: 1px solid #12bdff;
+  box-shadow: 0 0 20px rgba(18, 189, 255, 0.4);
+  transform: translateY(-6px);
+  background-color: #1f2328;
 }
 
 .skill-card i {
   font-size: 35px;
-  color: var(--primary);
+  color: #12bdff; /* Blue icon instead of red */
   margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.skill-card:hover i {
+  color: #00aaff;
 }
 
 .skill-card h4 {
   font-size: 14px;
-  color: #fff;
+  color: #e0e0e0;
   margin-top: 5px;
+  transition: color 0.3s ease;
+}
+
+.skill-card:hover h4 {
+  color: #fff;
 }
 
 /* Responsive */
@@ -308,6 +322,7 @@ section.skills-section {
     font-size: 12px;
   }
 }
+
 
 /* Projects Section */
 section.projects-section {
@@ -622,4 +637,5 @@ footer a {
     width: 100%;
   }
 }
+
 
