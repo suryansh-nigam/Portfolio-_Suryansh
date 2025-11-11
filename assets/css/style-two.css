@@ -271,12 +271,11 @@ section.skills-section {
   color: #e0e0e0;
 }
 
-/* Projects Section */
+* Projects Section */
 section.projects-section {
   background-color: var(--dark-primary);
   color: #fff;
-  padding: 80px 10%;
-  width: 100%;
+  padding: 50px 120px;
 }
 
 .projects-section h2 {
@@ -300,20 +299,59 @@ section.projects-section {
   padding: 33px;
   background-color: #22282f;
   border-radius: 8px;
-  transition: all 0.5s ease;
+  transition: all 0.5s ease 0s;
 }
 
 .projects-card-box:hover {
-  box-shadow: 0 0 20px rgba(255, 85, 85, 0.3);
+  box-shadow: 3px 5px 20px #613026;
   transform: translateY(-5px);
+}
+
+.projects-card-box__icons > i {
+  font-size: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--primary);
+  padding: 20px;
+}
+
+.projects-card-box:hover .projects-card-box__icons > i {
+  color: var(--primary);
+  background-color: var(--dark-primary);
+  transition: all 0.5s ease 0s;
+}
+
+.projects-card-box__desc h4 {
+  font-size: 18px;
+  margin: 18px 0 10px 0;
+}
+
+.projects-card-box__desc p {
+  font-size: 14px;
+  color: #c4c4c4;
+}
+
+.projects-card-box__buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-card-box__buttons button {
+  background-color: #22282f;
+}
+
+.projects-card-box__buttons button > a {
+  text-decoration: none;
+  font-size: 13px;
+  color: #fff;
 }
 
 /* Achievements Section */
 section.achievements-section {
   background-color: #22282f;
   color: #fff;
-  padding: 80px 10%;
-  width: 100%;
+  padding: 50px 120px;
 }
 
 .achievements-section h2 {
@@ -332,13 +370,43 @@ section.achievements-section {
   margin-top: 20px;
 }
 
+.achievements-card-box {
+  width: 30%;
+  margin: 20px;
+  padding: 30px;
+  background-color: var(--dark-primary);
+  border-radius: 8px;
+  transition: all 0.5s ease;
+}
+
+.achievements-card-box:hover {
+  box-shadow: 3px 5px 20px #613026;
+  transform: translateY(-5px);
+}
+
+.achievements-card-box__icons > i {
+  font-size: 30px;
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+  padding: 18px;
+}
+
+.achievements-card-box__desc h4 {
+  font-size: 18px;
+  margin: 18px 0 10px;
+}
+
+.achievements-card-box__desc p {
+  font-size: 14px;
+  color: #c4c4c4;
+}
+
 /* Contact Section */
 section.contact-section {
   background-color: #22282f;
   color: #fff;
   text-align: center;
-  padding: 60px 10%;
-  width: 100%;
+  padding: 30px;
 }
 
 .contact-section h2 {
@@ -360,6 +428,7 @@ textarea {
   border: none;
   outline: none;
   resize: none;
+  font-family: "Poppins", sans-serif;
 }
 
 .contact-section form div > input:focus,
@@ -367,15 +436,40 @@ textarea:focus {
   border: 1px solid var(--primary);
 }
 
+.contact-section form div > button {
+  font-size: 14px;
+}
+
+.contact__github {
+  margin-top: 15px;
+}
+
+.contact__github button {
+  padding: 10px 44px;
+  background-color: #171515;
+  font-size: 14px;
+}
+
+.contact__github button > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.contact__github button > a > i {
+  font-size: 16px;
+}
+
+.contact__github button:hover {
+  background-color: #030303;
+}
+
 /* Footer */
 footer {
   background-color: var(--dark-primary);
   color: gray;
   text-align: center;
-  padding: 20px 0;
+  padding: 15px 0;
   font-size: 13px;
-  width: 100%;
-  overflow: hidden;
 }
 
 footer a {
@@ -444,9 +538,14 @@ footer a {
     margin: auto;
   }
 
+  header ul {
+    margin-top: 10px;
+  }
+
   section.hero-section {
     flex-direction: column;
-    padding: 120px 40px 60px;
+    padding: 40px;
+    padding-top: 130px;
   }
 
   .hero-img img {
@@ -455,12 +554,17 @@ footer a {
 
   section.about-section {
     flex-direction: column;
-    padding: 60px 40px;
+    padding: 40px;
   }
 
   .about-content {
     margin-left: 0;
     margin-top: 30px;
+  }
+
+  section.projects-section,
+  section.achievements-section {
+    padding: 40px;
   }
 
   .projects-cards,
@@ -472,7 +576,7 @@ footer a {
   .projects-card-box,
   .achievements-card-box {
     width: 100%;
-    margin: 15px 0;
+    margin: 10px 0;
   }
 
   .contact-section form div input,
