@@ -875,5 +875,46 @@ footer a {
     padding: 40px 60px;
   }
 }
+/* ===== Responsive Navigation Fix (Theme 1) ===== */
+@media only screen and (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+  }
+
+  header ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #0f141a; /* match your theme */
+    margin-top: 10px;
+    padding: 10px 0;
+    border-radius: 8px;
+  }
+
+  header ul li {
+    margin: 8px 0;
+    list-style: none;
+  }
+
+  header ul li a {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .logo {
+    font-size: 18px;
+    text-align: center;
+    color: var(--primary);
+    font-weight: 700;
+  }
+}
+
+
 
 
