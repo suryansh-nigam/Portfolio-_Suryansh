@@ -216,16 +216,15 @@ section.about-section {
 section.education-section {
   background-color: var(--dark-primary);
   color: #fff;
-  padding: 60px 120px;
-  text-align: center;
+  padding: 50px 120px;
 }
 
 .education-section h2 {
   font-size: 28px;
-  margin-bottom: 30px;
+  text-align: center;
 }
 
-.education-section h2 span {
+.education-section h2 > span {
   color: var(--primary);
 }
 
@@ -233,82 +232,60 @@ section.education-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 25px;
+  margin-top: 20px;
 }
 
 .education-card {
-  background-color: #22282f;
-  border-radius: 10px;
   width: 30%;
+  margin: 20px;
   padding: 30px;
-  transition: all 0.4s ease;
-  box-shadow: 0 0 10px rgba(3, 80, 110, 0.3);
+  background-color: #22282f;
+  border-radius: 8px;
+  transition: all 0.5s ease;
 }
 
 .education-card:hover {
-  border: 1px solid var(--primary);
-  box-shadow: 0 0 20px #03506e;
+  box-shadow: 3px 5px 20px rgba(0, 230, 184, 0.4); /* same glow as other sections */
   transform: translateY(-5px);
+  border: 1px solid var(--primary);
 }
 
-.education-card__icon i {
-  font-size: 35px;
-  color: var(--primary);
+.education-card i {
+  font-size: 30px;
   border: 1px solid var(--primary);
   border-radius: 50%;
-  padding: 15px;
-  margin-bottom: 15px;
+  padding: 18px;
+  color: var(--primary);
 }
 
-.education-card__content h4 {
+.education-info h4 {
   font-size: 18px;
+  margin: 18px 0 10px;
   color: #fff;
-  margin-bottom: 8px;
 }
 
-.education-card__content h5 {
-  font-size: 15px;
-  color: #c4c4c4;
-  margin-bottom: 5px;
-}
-
-.education-card__content p {
+.education-info p {
   font-size: 14px;
-  color: #a9a9a9;
+  color: #c4c4c4;
 }
 
-/* Responsive: Tablet */
+/* Responsive Design */
 @media only screen and (max-width: 768px) {
   section.education-section {
-    padding: 40px 30px;
+    padding: 40px;
+  }
+
+  .education-container {
+    flex-direction: column;
+    align-items: center;
   }
 
   .education-card {
     width: 100%;
-    padding: 25px;
+    margin: 10px 0;
   }
 }
 
-/* Responsive: Mobile */
-@media only screen and (max-width: 480px) {
-  .education-section h2 {
-    font-size: 24px;
-  }
-
-  .education-card__icon i {
-    font-size: 28px;
-    padding: 10px;
-  }
-
-  .education-card__content h4 {
-    font-size: 16px;
-  }
-
-  .education-card__content h5,
-  .education-card__content p {
-    font-size: 13px;
-  }
-}
 
 /* Skills Section */
 section.skills-section {
@@ -725,5 +702,6 @@ footer a {
     width: 100%;
   }
 }
+
 
 
